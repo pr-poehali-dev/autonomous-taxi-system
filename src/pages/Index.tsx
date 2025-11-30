@@ -15,12 +15,12 @@ interface Vehicle {
 
 const Index = () => {
   const [vehicles, setVehicles] = useState<Vehicle[]>([
-    { id: 'AV-001', status: 'active', battery: 87, location: { x: 25, y: 30 }, speed: 45, passengers: 2 },
-    { id: 'AV-002', status: 'idle', battery: 95, location: { x: 60, y: 45 }, speed: 0, passengers: 0 },
-    { id: 'AV-003', status: 'active', battery: 72, location: { x: 40, y: 65 }, speed: 38, passengers: 1 },
-    { id: 'AV-004', status: 'charging', battery: 45, location: { x: 75, y: 25 }, speed: 0, passengers: 0 },
-    { id: 'AV-005', status: 'active', battery: 91, location: { x: 50, y: 80 }, speed: 52, passengers: 3 },
-    { id: 'AV-006', status: 'maintenance', battery: 0, location: { x: 85, y: 55 }, speed: 0, passengers: 0 },
+    { id: 'LID-001', status: 'active', battery: 87, location: { x: 25, y: 30 }, speed: 45, passengers: 2 },
+    { id: 'LID-002', status: 'idle', battery: 95, location: { x: 60, y: 45 }, speed: 0, passengers: 0 },
+    { id: 'LID-003', status: 'active', battery: 72, location: { x: 40, y: 65 }, speed: 38, passengers: 1 },
+    { id: 'LID-004', status: 'charging', battery: 45, location: { x: 75, y: 25 }, speed: 0, passengers: 0 },
+    { id: 'LID-005', status: 'active', battery: 91, location: { x: 50, y: 80 }, speed: 52, passengers: 3 },
+    { id: 'LID-006', status: 'maintenance', battery: 0, location: { x: 85, y: 55 }, speed: 0, passengers: 0 },
   ]);
 
   const [selectedVehicle, setSelectedVehicle] = useState<string | null>(null);
@@ -88,8 +88,11 @@ const Index = () => {
       <div className="max-w-[1600px] mx-auto space-y-6">
         <header className="flex items-center justify-between">
           <div>
-            <h1 className="text-4xl font-bold text-foreground mb-2">Система управления автономным флотом</h1>
-            <p className="text-muted-foreground">Мониторинг и диспетчеризация в реальном времени</p>
+            <div className="flex items-center gap-3 mb-2">
+              <h1 className="text-4xl font-bold text-foreground">LIDcar</h1>
+              <Badge variant="outline" className="bg-primary/20 text-primary border-primary/50 px-3 py-1">AI Fleet</Badge>
+            </div>
+            <p className="text-muted-foreground">Система управления автономным флотом беспилотных такси</p>
           </div>
           <div className="flex items-center gap-3">
             <Badge variant="outline" className="px-4 py-2 text-sm">
