@@ -87,13 +87,21 @@ const Index = () => {
     <div className="min-h-screen bg-background p-6">
       <div className="max-w-[1600px] mx-auto space-y-6">
         <header className="flex items-center justify-between">
-          <div>
-            <img 
-              src="https://cdn.poehali.dev/files/46f674e1-eb83-45ae-8017-14dcaf4d2b90.png" 
-              alt="LIDcar logo" 
-              className="h-10 w-auto object-contain brightness-0 invert hue-rotate-[250deg] saturate-[3]"
-              style={{ filter: 'brightness(0) saturate(100%) invert(47%) sepia(87%) saturate(3089%) hue-rotate(243deg) brightness(98%) contrast(101%)' }}
-            />
+          <div className="flex items-center gap-4">
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-secondary p-2 flex items-center justify-center shadow-lg">
+              <img 
+                src="https://cdn.poehali.dev/projects/b61607b4-534c-49d6-bb0f-5130baf69be7/files/76c4f9cb-0401-47cf-b600-0c064762b2bd.jpg" 
+                alt="LIDcar logo" 
+                className="w-full h-full object-contain rounded-lg"
+              />
+            </div>
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <h1 className="text-4xl font-bold text-foreground">LIDcar</h1>
+                <Badge variant="outline" className="bg-primary/20 text-primary border-primary/50 px-3 py-1">AI Fleet</Badge>
+              </div>
+              <p className="text-muted-foreground">Система управления автономным флотом беспилотных такси</p>
+            </div>
           </div>
           <div className="flex items-center gap-3">
             <Badge variant="outline" className="px-4 py-2 text-sm">
