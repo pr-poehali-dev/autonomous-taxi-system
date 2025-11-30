@@ -86,9 +86,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background p-6">
       <div className="max-w-[1600px] mx-auto space-y-6">
-        <header className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-secondary p-2 flex items-center justify-center shadow-lg">
+        <header className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-primary to-secondary p-2 flex items-center justify-center shadow-lg">
               <img 
                 src="https://cdn.poehali.dev/projects/b61607b4-534c-49d6-bb0f-5130baf69be7/files/76c4f9cb-0401-47cf-b600-0c064762b2bd.jpg" 
                 alt="LIDcar logo" 
@@ -96,18 +96,19 @@ const Index = () => {
               />
             </div>
             <div>
-              <div className="flex items-center gap-3 mb-2">
-                <h1 className="text-4xl font-bold text-foreground">LIDcar</h1>
-                <Badge variant="outline" className="bg-primary/20 text-primary border-primary/50 px-3 py-1">AI Fleet</Badge>
+              <div className="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2">
+                <h1 className="text-2xl sm:text-4xl font-bold text-foreground">LIDcar</h1>
+                <Badge variant="outline" className="bg-primary/20 text-primary border-primary/50 px-2 py-0.5 sm:px-3 sm:py-1 text-xs sm:text-sm">AI Fleet</Badge>
               </div>
-              <p className="text-muted-foreground">Система управления автономным флотом беспилотных такси</p>
+              <p className="text-muted-foreground text-xs sm:text-base hidden sm:block">Система управления автономным флотом беспилотных такси</p>
+              <p className="text-muted-foreground text-xs sm:hidden">Управление автономным флотом</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <Badge variant="outline" className="px-4 py-2 text-sm flex items-center gap-2">
-              <span className="relative flex h-3 w-3">
+            <Badge variant="outline" className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm flex items-center gap-2">
+              <span className="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-green-500"></span>
               </span>
               Онлайн
             </Badge>
